@@ -192,6 +192,8 @@ Sub 適切な箇所に改ページを入れる(ByVal sheet As Worksheet)
     Dim TARGET_COL As Integer           '対象列
     Dim LINE_CNT_PAGEBREAK As Integer   'デフォルト:50    50行数くらいで改行   それ以上にすると1ページに収まりきらない事があり、エクセルが自動で改ページを挿入してしまう
     Dim MARGIN_PAGEBREAK   As Integer   'デフォルト:20    次の改ページまで20行以上ある場合、改ページセット
+    Dim i As Integer
+    Dim p As Integer
 
     Debug.Print "============================================================================================================"
     Debug.Print "============改ページを自動で設定============================================================================"
@@ -379,6 +381,7 @@ Function SetPagebreak(ByVal startLine As Integer, ByVal endLine As Integer, ByVa
     Dim line_cnt As Integer
     line_cnt = 0
 
+    Dim i As Integer
     For i = startLine To endLine
         'Debug.Print "行番号: " & i & "   line_cnt = " & line_cnt & "    Value: " & Cells(i, 2).Value
         

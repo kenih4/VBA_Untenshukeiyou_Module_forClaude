@@ -114,7 +114,7 @@ Function OpenBookOLD(ByVal WorkBookName As String) As Workbook
     On Error GoTo 0  ' エラーハンドリング解除
 
     ' 関数の戻り値として設定
-    Set OpenBook = OWB
+    Set OpenBookOLD = OWB
 
     Debug.Print "Debug   OpenBook Finish"
 End Function
@@ -265,11 +265,11 @@ Function SheetExist_ActiveWorkbook(ByVal WorkSheetName As String) As Boolean
   Dim sht As Worksheet
   For Each sht In ActiveWorkbook.Worksheets
     If sht.Name = WorkSheetName Then
-        flgExsistSheet = True
+        SheetExist_ActiveWorkbook = True
         Exit Function
     End If
   Next sht
-  flgExsistSheet = False
+  SheetExist_ActiveWorkbook = False
 End Function
 
 

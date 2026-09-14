@@ -212,6 +212,7 @@ Function CpPaste(sheetS As Worksheet, rangeS As String, colS As Integer, sheetT 
     If MsgBox("ここに貼り付けていいですか？", vbYesNo + vbQuestion) = vbYes Then
         pasteCELL.PasteSpecial Paste:=xlPasteValues
         If MsgBox("貼り付けましたがOKですか？？" & vbCrLf & "次に進むにはYes", vbYesNo + vbQuestion) = vbNo Then Exit Function
+        CpPaste = True
     End If
 
 End Function

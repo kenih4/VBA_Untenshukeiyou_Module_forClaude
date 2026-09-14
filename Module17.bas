@@ -9,8 +9,8 @@ Public Const TARGET_FILE_PATH As String = BNAME_MATOME ' ★★★ ここを監視したい
 ' 公開変数：次回の実行時刻を格納
 Public NextRunTime As Date
 
-' 公開変数：前回のファイルアクセス状態を記憶 (True:アクセス可能, False:アクセス不可)
-Private previousAccessStatus As Boolean
+' 公開変数：前回のファイルアクセス状態を記憶 (True:アクセス可能, False:アクセス不可, Empty:未実行)
+Private previousAccessStatus As Variant
 
 ' ///////////////////////////////////////////////////////////////////////////
 ' // 関数：ファイルのアクセス可否をチェックする  ネットワーク上のファイルにアクセスできるか確認　「Microsoft Scripting Runtime」が必要======================================================
