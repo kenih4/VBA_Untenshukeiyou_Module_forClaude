@@ -1,0 +1,24 @@
+Option Explicit
+
+Private Sub Workbook_SheetSelectionChange(ByVal Sh As Object, ByVal Target As Range)
+    Application.ScreenUpdating = True
+End Sub
+
+
+Private Sub Workbook_Open()
+    'MsgBox "ワークブックが開かれました！"
+    ThisWorkbook.sheetS("手順").Activate
+    ThisWorkbook.sheetS("手順").Cells(1, 1).Select
+    
+    Call GetWorkbookFolderToCell
+    
+    Call CheckCircularReference '循環参照の確認
+    
+    If Not CheckServerAccess_FSO(BNAME_KEIKAKU) Then
+        'Exit Sub
+    End If
+    
+    'MsgBox "TEST@Workbook_Open"
+    '   Call StartMonitoring 'ネットワークの接続状況をモニタリング  リアルタイムでなく、あまり意味なかったのでコメントアウト
+    
+End Sub
