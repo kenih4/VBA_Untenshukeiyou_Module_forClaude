@@ -62,8 +62,7 @@ NextComp:
         MsgBox "No"
     Else
         vscodePath = "C:\Users\kenic\AppData\Local\Programs\Microsoft VS Code\Code.exe"
-        exportFolder = "C:\Users\kenic\Dropbox\gitdir\VBA_Untenshukeiyou_Module_forClaude"
-        Command = """" & vscodePath & """ """ & exportFolder & """"
+        Command = """" & vscodePath & """ """ & Left(exportFolder, Len(exportFolder) - 1) & """"
         shell Command, vbNormalFocus
     End If
     
