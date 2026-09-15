@@ -11,7 +11,7 @@ Private Const CT_DOCUMENT As Long = 100    ' vbext_ct_Document    ThisWorkbook/ƒ
 
 Sub ExportModulesForGit()
     Dim exportFolder As String
-    exportFolder = "C:\Users\kenic\Dropbox\gitdir\VBA_Untenshukeiyou_Module_forClaude\"
+    exportFolder = "C:\Users\kenic\Dropbox\gitdir\VBA_Untenshukeiyou_Module_Export-exclusive\"
 
     If Dir(exportFolder, vbDirectory) = "" Then MkDir exportFolder
 
