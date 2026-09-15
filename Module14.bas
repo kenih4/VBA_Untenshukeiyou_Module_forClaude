@@ -65,7 +65,7 @@ Sub Initial_Check(BL As Integer)
     If Check_exixt("GUN HV OFF時間記録", wb_SHUKEI) = True Then Cnt = Check(Array(9, 10, 11, 12, 13, 14, 15), 9, 30, wb_SHUKEI.Worksheets("GUN HV OFF時間記録"))
     If Check_exixt("集計記録", wb_SHUKEI) = True Then Cnt = Check(Array(2, 3, 4, 6, 7, 8, 9), 3, 500, wb_SHUKEI.Worksheets("集計記録")) ' とりあえず500行くらいチェック    E列(Fault)もチェックしたいが、ここは特殊　最終行の2行目から変な数式が入ってるがいるのか？
     If Check_exixt("利用時間（期間）", wb_SHUKEI) = True Then Cnt = Check(Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14), 2, 30, wb_SHUKEI.Worksheets("利用時間（期間）")) ' 利用時間（期間） のカッコは全角
-    If Check_exixt("利用時間（期間）", wb_SHUKEI) = True Then Cnt = Check(Array(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 23, 25, 26, 27, 28, 29), 2, 30, wb_SHUKEI.Worksheets("利用時間(User)"))
+    If Check_exixt("利用時間(User)", wb_SHUKEI) = True Then Cnt = Check(Array(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 23, 25, 26, 27, 28, 29), 2, 30, wb_SHUKEI.Worksheets("利用時間(User)"))
     If Check_exixt("利用時間(シフト)", wb_SHUKEI) = True Then Cnt = Check(Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16), 1, 30, wb_SHUKEI.Worksheets("利用時間(シフト)"))
     If Check_exixt("Fault間隔(ユニット)", wb_SHUKEI) = True Then Cnt = Check(Array(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), 2, 30, wb_SHUKEI.Worksheets("Fault間隔(ユニット)")) ' シート名に半角スペースが入ってることがあるので注意　正しくしないと「インデックスが有効範囲にありません」とエラーメッセージがでける
     If Check_exixt("運転状況(対象ユニット)", wb_SHUKEI) = True Then Cnt = Check(Array(3, 4, 5, 6, 7, 8, 9), -18, 29, wb_SHUKEI.Worksheets("運転状況(対象ユニット)"))
