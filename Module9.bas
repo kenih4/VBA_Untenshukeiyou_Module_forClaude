@@ -1,10 +1,10 @@
 Attribute VB_Name = "Module9"
 Option Explicit
 
-Sub ƒ†ƒjƒbƒgBL‚ÌŒ‹‰Ê‚ğƒV[ƒg‚Ü‚Æ‚ß‚É’£‚è•t‚¯‚é()
+Sub ãƒ¦ãƒ‹ãƒƒãƒˆBLã®çµæœã‚’ã‚·ãƒ¼ãƒˆã¾ã¨ã‚ã«å¼µã‚Šä»˜ã‘ã‚‹()
     On Error GoTo ErrorHandler
             
-    'MsgBox "ƒ}ƒNƒ‚Ì“à—e" & vbCrLf & "uƒV[ƒguƒ†ƒjƒbƒgv‚Ì€–Úa‚ÆƒV[ƒguƒ†ƒjƒbƒg(BL2)‚Æ(BL3)v‚Ì€–ÚbAc‚ğƒV[ƒgu‚Ü‚Æ‚ßv‚É“\‚è•t‚¯v" & vbCrLf & "‚Å‚·B", Buttons:=vbInformation
+    'MsgBox "ãƒã‚¯ãƒ­ã®å†…å®¹" & vbCrLf & "ã€Œã‚·ãƒ¼ãƒˆã€Œãƒ¦ãƒ‹ãƒƒãƒˆã€ã®é …ç›®aã¨ã‚·ãƒ¼ãƒˆã€Œãƒ¦ãƒ‹ãƒƒãƒˆ(BL2)ã¨(BL3)ã€ã®é …ç›®bã€cã‚’ã‚·ãƒ¼ãƒˆã€Œã¾ã¨ã‚ã€ã«è²¼ã‚Šä»˜ã‘ã€" & vbCrLf & "ã§ã™ã€‚", Buttons:=vbInformation
     
     Dim i As Integer
     Dim TargetUnit As String
@@ -20,13 +20,13 @@ Sub ƒ†ƒjƒbƒgBL‚ÌŒ‹‰Ê‚ğƒV[ƒg‚Ü‚Æ‚ß‚É’£‚è•t‚¯‚é()
         Exit Sub
     End If
     
-    ' wb_MATOME‚ğŠJ‚­
-    Dim wb_MATOME As Workbook    ' ‚¿‚á‚ñ‚ÆéŒ¾‚µ‚È‚¢‚ÆAŠÖ”SheetExists‚Ìˆø”‚ªˆÙ‚È‚é‚Æ“{‚ç‚ê‚é
-    Set wb_MATOME = OpenBook(BNAME_MATOME, False) ' ƒtƒ‹ƒpƒX‚ğw’è
-    If wb_MATOME Is Nothing Then Call Fin("ƒuƒbƒN‚ªŠJ‚¯‚Ü‚¹‚ñ‚Å‚µ‚½BƒpƒX‚ÌˆÙ‚È‚é“¯‚¶–¼‘O‚ÌƒuƒbƒN‚ªŠù‚ÉŠJ‚©‚ê‚Ä‚é‰Â”\«‚ª‚ ‚è‚Ü‚·B", 3)
+    ' wb_MATOMEã‚’é–‹ã
+    Dim wb_MATOME As Workbook    ' ã¡ã‚ƒã‚“ã¨å®£è¨€ã—ãªã„ã¨ã€é–¢æ•°SheetExistsã®å¼•æ•°ãŒç•°ãªã‚‹ã¨æ€’ã‚‰ã‚Œã‚‹
+    Set wb_MATOME = OpenBook(BNAME_MATOME, False) ' ãƒ•ãƒ«ãƒ‘ã‚¹ã‚’æŒ‡å®š
+    If wb_MATOME Is Nothing Then Call Fin("ãƒ–ãƒƒã‚¯ãŒé–‹ã‘ã¾ã›ã‚“ã§ã—ãŸã€‚ãƒ‘ã‚¹ã®ç•°ãªã‚‹åŒã˜åå‰ã®ãƒ–ãƒƒã‚¯ãŒæ—¢ã«é–‹ã‹ã‚Œã¦ã‚‹å¯èƒ½æ€§ãŒã‚ã‚Šã¾ã™ã€‚", 3)
     wb_MATOME.Activate
     If ActiveWorkbook.Name <> wb_MATOME.Name Then
-        Call Fin("Œ»İƒAƒNƒeƒBƒu‚ÈƒuƒbƒN–¼‚ªˆÙí‚Å‚·BI—¹‚µ‚Ü‚·B" & vbCrLf & "ActiveWorkbook.Name:  " & ActiveWorkbook.Name & vbCrLf & "BNAME_SHUKEI:  " & BNAME_SHUKEI, 3)
+        Call Fin("ç¾åœ¨ã‚¢ã‚¯ãƒ†ã‚£ãƒ–ãªãƒ–ãƒƒã‚¯åãŒç•°å¸¸ã§ã™ã€‚çµ‚äº†ã—ã¾ã™ã€‚" & vbCrLf & "ActiveWorkbook.Name:  " & ActiveWorkbook.Name & vbCrLf & "BNAME_SHUKEI:  " & BNAME_SHUKEI, 3)
     End If
     
     
@@ -34,13 +34,13 @@ Sub ƒ†ƒjƒbƒgBL‚ÌŒ‹‰Ê‚ğƒV[ƒg‚Ü‚Æ‚ß‚É’£‚è•t‚¯‚é()
     Application.ExecuteExcel4Macro "SHOW.TOOLBAR(""Ribbon"",False)"
     ActiveWindow.Zoom = 60
     'Application.DisplayFullScreen = True
-    wb_MATOME.Worksheets("FaultWŒv").Activate '‚±‚ê‘å–
-    wb_MATOME.Worksheets("FaultWŒv").Cells(1, 1).Select ' ‘I‘ğ”ÍˆÍ‚ªc‚Á‚Ä‚é‚Ì‹C‚¿ˆ«‚¢‚Ì‚Å‚Æ‚è‚ ‚¦‚¸
+    wb_MATOME.Worksheets("Faulté›†è¨ˆ").Activate 'ã“ã‚Œå¤§äº‹
+    wb_MATOME.Worksheets("Faulté›†è¨ˆ").Cells(1, 1).Select ' é¸æŠç¯„å›²ãŒæ®‹ã£ã¦ã‚‹ã®æ°—æŒã¡æ‚ªã„ã®ã§ã¨ã‚Šã‚ãˆãš
     
     
     For i = 1 To sheetS.Count
         Debug.Print sheetS(i).Name
-        If sheetS(i).Name = "‚Ü‚Æ‚ß " Then 'ƒV[ƒgu‚Ü‚Æ‚ß v‚ÌŸ‚ÌƒV[ƒg‚ª‘ÎÛ‚Æ‚È‚éƒ†ƒjƒbƒg
+        If sheetS(i).Name = "ã¾ã¨ã‚ " Then 'ã‚·ãƒ¼ãƒˆã€Œã¾ã¨ã‚ ã€ã®æ¬¡ã®ã‚·ãƒ¼ãƒˆãŒå¯¾è±¡ã¨ãªã‚‹ãƒ¦ãƒ‹ãƒƒãƒˆ
             TargetSheet = sheetS(i + 1).Name
             Debug.Print "Hit-------" & TargetSheet
             Exit For
@@ -51,7 +51,7 @@ Sub ƒ†ƒjƒbƒgBL‚ÌŒ‹‰Ê‚ğƒV[ƒg‚Ü‚Æ‚ß‚É’£‚è•t‚¯‚é()
     
     
     
-    'uƒ†ƒjƒbƒg(BL*)v‚Æ‚¢‚¤ƒpƒ^[ƒ“•\Œ»‚Ìê‡Ÿ‚¬‚·‚·‚Ş ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    'ã€Œãƒ¦ãƒ‹ãƒƒãƒˆ(BL*)ã€ã¨ã„ã†ãƒ‘ã‚¿ãƒ¼ãƒ³è¡¨ç¾ã®å ´åˆæ¬¡ãã™ã™ã‚€ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Dim Hakken As Boolean
     Dim regex As Object
     Dim testString As String
@@ -60,39 +60,39 @@ Sub ƒ†ƒjƒbƒgBL‚ÌŒ‹‰Ê‚ğƒV[ƒg‚Ü‚Æ‚ß‚É’£‚è•t‚¯‚é()
     Dim pattern As String
     Hakken = False
 
-    ' ŒŸõ‚µ‚½‚¢•¶š—ñ
+    ' æ¤œç´¢ã—ãŸã„æ–‡å­—åˆ—
     testString = TargetSheet
 
-    ' ³‹K•\Œ»ƒIƒuƒWƒFƒNƒg‚Ìì¬
+    ' æ­£è¦è¡¨ç¾ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ä½œæˆ
     Set regex = CreateObject("VBScript.RegExp")
 
     
-'    pattern = "\d+-\d+\(BL\d\)"  ' ³‹K•\Œ»ƒpƒ^[ƒ“‚Ìİ’èi•”•ªˆê’v‚ğŠÜ‚Şj
-'    pattern = "^\d+-\d+\(BL\d\)$"  ' ³‹K•\Œ»ƒpƒ^[ƒ“‚Ìİ’èiŠ®‘Sˆê’vj
-    pattern = "^\d+-\d+"  ' ³‹K•\Œ»ƒpƒ^[ƒ“‚Ìİ’èiŠ®‘Sˆê’vj
+'    pattern = "\d+-\d+\(BL\d\)"  ' æ­£è¦è¡¨ç¾ãƒ‘ã‚¿ãƒ¼ãƒ³ã®è¨­å®šï¼ˆéƒ¨åˆ†ä¸€è‡´ã‚’å«ã‚€ï¼‰
+'    pattern = "^\d+-\d+\(BL\d\)$"  ' æ­£è¦è¡¨ç¾ãƒ‘ã‚¿ãƒ¼ãƒ³ã®è¨­å®šï¼ˆå®Œå…¨ä¸€è‡´ï¼‰
+    pattern = "^\d+-\d+"  ' æ­£è¦è¡¨ç¾ãƒ‘ã‚¿ãƒ¼ãƒ³ã®è¨­å®šï¼ˆå®Œå…¨ä¸€è‡´ï¼‰
 
-    ' ³‹K•\Œ»‚ÌƒvƒƒpƒeƒB‚ğİ’è
+    ' æ­£è¦è¡¨ç¾ã®ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‚’è¨­å®š
     With regex
-        .Global = True         ' ‚·‚×‚Ä‚Ìˆê’v‚ğŒŸõ
-        .IgnoreCase = True     ' ‘å•¶š‚Æ¬•¶š‚ğ‹æ•Ê‚µ‚È‚¢
-        .pattern = pattern     ' ŒŸõƒpƒ^[ƒ“‚ğw’è
+        .Global = True         ' ã™ã¹ã¦ã®ä¸€è‡´ã‚’æ¤œç´¢
+        .IgnoreCase = True     ' å¤§æ–‡å­—ã¨å°æ–‡å­—ã‚’åŒºåˆ¥ã—ãªã„
+        .pattern = pattern     ' æ¤œç´¢ãƒ‘ã‚¿ãƒ¼ãƒ³ã‚’æŒ‡å®š
     End With
 
-    ' •¶š—ñ“à‚Ìˆê’v‚ğŒŸõ
+    ' æ–‡å­—åˆ—å†…ã®ä¸€è‡´ã‚’æ¤œç´¢
     Set matches = regex.Execute(testString)
 
-    ' ˆê’v‚µ‚½Œ‹‰Ê‚ğ•\¦
+    ' ä¸€è‡´ã—ãŸçµæœã‚’è¡¨ç¤º
     For Each match In matches
-        Debug.Print "Œ©‚Â‚©‚Á‚½ƒpƒ^[ƒ“: " & match.Value
+        Debug.Print "è¦‹ã¤ã‹ã£ãŸãƒ‘ã‚¿ãƒ¼ãƒ³: " & match.Value
         Hakken = True
     Next match
 
-    ' ƒIƒuƒWƒFƒNƒg‚ÌƒNƒŠ[ƒ“ƒAƒbƒv
+    ' ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ã‚¯ãƒªãƒ¼ãƒ³ã‚¢ãƒƒãƒ—
     Set regex = Nothing
     Set matches = Nothing
     
     If Hakken = False Then
-        Call Fin("‚Ü‚Æ‚ßƒV[ƒg‚ÌŸ‚ÌƒV[ƒg–¼‚ªA" & vbCrLf & "u" & TargetSheet & "v" & vbCrLf & "‚Å‚·B" & vbCrLf & "uƒ†ƒjƒbƒgv‚Æ‚¢‚¤ƒpƒ^[ƒ“•\Œ»‚Å‚Í‚ ‚è‚Ü‚¹‚ñB", 3)
+        Call Fin("ã¾ã¨ã‚ã‚·ãƒ¼ãƒˆã®æ¬¡ã®ã‚·ãƒ¼ãƒˆåãŒã€" & vbCrLf & "ã€Œ" & TargetSheet & "ã€" & vbCrLf & "ã§ã™ã€‚" & vbCrLf & "ã€Œãƒ¦ãƒ‹ãƒƒãƒˆã€ã¨ã„ã†ãƒ‘ã‚¿ãƒ¼ãƒ³è¡¨ç¾ã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚", 3)
     End If
     
     '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -113,17 +113,17 @@ Sub ƒ†ƒjƒbƒgBL‚ÌŒ‹‰Ê‚ğƒV[ƒg‚Ü‚Æ‚ß‚É’£‚è•t‚¯‚é()
     
     
     
-    'ƒV[ƒg‚Ì‘¶İŠm”F
+    'ã‚·ãƒ¼ãƒˆã®å­˜åœ¨ç¢ºèª
     Sonzai_flg_BL2 = SheetExists(wb_MATOME, TargetUnit & "(BL2)")
     Sonzai_flg_BL3 = SheetExists(wb_MATOME, TargetUnit & "(BL3)")
     Sonzai_flg_Merged = SheetExists(wb_MATOME, TargetUnit)
     If Not Sonzai_flg_Merged Or Not Sonzai_flg_BL2 Or Not Sonzai_flg_BL3 Then
-        Call Fin("ƒ†ƒjƒbƒgA‚Ü‚½‚ÍAƒ†ƒjƒbƒg(BL2) ‚Ü‚½‚Í ƒ†ƒjƒbƒg(BL3) ‚ÌƒV[ƒg‚ªo—ˆ‚Ä‚Ü‚¹‚ñB", 3)
+        Call Fin("ãƒ¦ãƒ‹ãƒƒãƒˆã€ã¾ãŸã¯ã€ãƒ¦ãƒ‹ãƒƒãƒˆ(BL2) ã¾ãŸã¯ ãƒ¦ãƒ‹ãƒƒãƒˆ(BL3) ã®ã‚·ãƒ¼ãƒˆãŒå‡ºæ¥ã¦ã¾ã›ã‚“ã€‚", 3)
     End If
     
     
-    If MsgBox("‚±‚Ìƒ}ƒNƒ‚ÍuƒV[ƒguƒ†ƒjƒbƒgv‚Ì€–Úa‚ÆƒV[ƒguƒ†ƒjƒbƒg(BL2)‚Æ(BL3)v‚Ì€–ÚbAc‚ğƒV[ƒgu‚Ü‚Æ‚ßv‚É“\‚è•t‚¯‚µ‚Ü‚·B" & vbCrLf & "‘Îˆƒ†ƒjƒbƒg‚Íu" & TargetUnit & "v‚Å‚·B" & vbCrLf & "‚¢‚¢‚Å‚·‚©HH", vbYesNo + vbQuestion, "Šm”F") = vbNo Then
-        Call Fin("uNov‚ª‘I‘ğ‚³‚ê‚Ü‚µ‚½", 1)
+    If MsgBox("ã“ã®ãƒã‚¯ãƒ­ã¯ã€Œã‚·ãƒ¼ãƒˆã€Œãƒ¦ãƒ‹ãƒƒãƒˆã€ã®é …ç›®aã¨ã‚·ãƒ¼ãƒˆã€Œãƒ¦ãƒ‹ãƒƒãƒˆ(BL2)ã¨(BL3)ã€ã®é …ç›®bã€cã‚’ã‚·ãƒ¼ãƒˆã€Œã¾ã¨ã‚ã€ã«è²¼ã‚Šä»˜ã‘ã—ã¾ã™ã€‚" & vbCrLf & "å¯¾å‡¦ãƒ¦ãƒ‹ãƒƒãƒˆã¯ã€Œ" & TargetUnit & "ã€ã§ã™ã€‚" & vbCrLf & "ã„ã„ã§ã™ã‹ï¼Ÿï¼Ÿ", vbYesNo + vbQuestion, "ç¢ºèª") = vbNo Then
+        Call Fin("ã€ŒNoã€ãŒé¸æŠã•ã‚Œã¾ã—ãŸ", 1)
     End If
 
     
@@ -131,61 +131,61 @@ Sub ƒ†ƒjƒbƒgBL‚ÌŒ‹‰Ê‚ğƒV[ƒg‚Ü‚Æ‚ß‚É’£‚è•t‚¯‚é()
     
     
     
-    '(a)‰^“]ŠÔ@ŠúŠÔ–ˆ  ‚Ì•”•ª‚Ìˆ—
-    Category = "(a)‰^“]ŠÔ@ŠúŠÔ–ˆ"
+    '(a)é‹è»¢æ™‚é–“ã€€æœŸé–“æ¯  ã®éƒ¨åˆ†ã®å‡¦ç†
+    Category = "(a)é‹è»¢æ™‚é–“ã€€æœŸé–“æ¯"
     result = Check_Unit_and_Copy(Category, 2, wb_MATOME.Worksheets(TargetUnit), TargetUnit)
-    If result = False Then Call Fin("ŠÖ”[Check_Unit_and_Copy]‚ª¸”s‚µ‚Ü‚µ‚½", 3)
-    If MsgBox("‘I‘ğ‚³‚ê‚Ä‚é•”•ª‚ğƒRƒs[‚µ‚Ü‚µ‚½B" & vbCrLf & "Ÿ‚ÍƒV[ƒgu‚Ü‚Æ‚ßv‚É’£‚è•t‚¯‚Å‚·B" & vbCrLf & "i‚İ‚Ü‚·‚©H", vbYesNo + vbQuestion, "Šm”F") = vbNo Then Call Fin("uNov‚ª‘I‘ğ‚³‚ê‚Ü‚µ‚½", 1)
-    result = Find_targetcell_and_paste(Category, 2, wb_MATOME.Worksheets("‚Ü‚Æ‚ß "))
+    If result = False Then Call Fin("é–¢æ•°[Check_Unit_and_Copy]ãŒå¤±æ•—ã—ã¾ã—ãŸ", 3)
+    If MsgBox("é¸æŠã•ã‚Œã¦ã‚‹éƒ¨åˆ†ã‚’ã‚³ãƒ”ãƒ¼ã—ã¾ã—ãŸã€‚" & vbCrLf & "æ¬¡ã¯ã‚·ãƒ¼ãƒˆã€Œã¾ã¨ã‚ã€ã«å¼µã‚Šä»˜ã‘ã§ã™ã€‚" & vbCrLf & "é€²ã¿ã¾ã™ã‹ï¼Ÿ", vbYesNo + vbQuestion, "ç¢ºèª") = vbNo Then Call Fin("ã€ŒNoã€ãŒé¸æŠã•ã‚Œã¾ã—ãŸ", 1)
+    result = Find_targetcell_and_paste(Category, 2, wb_MATOME.Worksheets("ã¾ã¨ã‚ "))
     
     
     
     
     Debug.Print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-    '(b)‰^“]ŠÔ@ƒVƒtƒg–ˆ  ‚Ì•”•ª‚Ìˆ—
+    '(b)é‹è»¢æ™‚é–“ã€€ã‚·ãƒ•ãƒˆæ¯  ã®éƒ¨åˆ†ã®å‡¦ç†
     Category = "(b-1)BL2"
     result = Check_Unit_and_Copy(Category, 2, wb_MATOME.Worksheets(TargetUnit & "(BL2)"), TargetUnit)
-    If result = False Then Call Fin("ŠÖ”[Check_Unit_and_Copy]‚ª¸”s‚µ‚Ü‚µ‚½", 3)
-    If MsgBox("‘I‘ğ‚³‚ê‚Ä‚é•”•ª‚ğƒRƒs[‚µ‚Ü‚µ‚½B" & vbCrLf & "Ÿ‚ÍƒV[ƒgu‚Ü‚Æ‚ßv‚É’£‚è•t‚¯‚Å‚·B" & vbCrLf & "i‚İ‚Ü‚·‚©H", vbYesNo + vbQuestion, "Šm”F") = vbNo Then Call Fin("uNov‚ª‘I‘ğ‚³‚ê‚Ü‚µ‚½", 1)
-    result = Find_targetcell_and_paste(Category, 2, wb_MATOME.Worksheets("‚Ü‚Æ‚ß "))
+    If result = False Then Call Fin("é–¢æ•°[Check_Unit_and_Copy]ãŒå¤±æ•—ã—ã¾ã—ãŸ", 3)
+    If MsgBox("é¸æŠã•ã‚Œã¦ã‚‹éƒ¨åˆ†ã‚’ã‚³ãƒ”ãƒ¼ã—ã¾ã—ãŸã€‚" & vbCrLf & "æ¬¡ã¯ã‚·ãƒ¼ãƒˆã€Œã¾ã¨ã‚ã€ã«å¼µã‚Šä»˜ã‘ã§ã™ã€‚" & vbCrLf & "é€²ã¿ã¾ã™ã‹ï¼Ÿ", vbYesNo + vbQuestion, "ç¢ºèª") = vbNo Then Call Fin("ã€ŒNoã€ãŒé¸æŠã•ã‚Œã¾ã—ãŸ", 1)
+    result = Find_targetcell_and_paste(Category, 2, wb_MATOME.Worksheets("ã¾ã¨ã‚ "))
     
-    '(b)‰^“]ŠÔ@ƒVƒtƒg–ˆ  ‚Ì•”•ª‚Ìˆ—
+    '(b)é‹è»¢æ™‚é–“ã€€ã‚·ãƒ•ãƒˆæ¯  ã®éƒ¨åˆ†ã®å‡¦ç†
     Category = "(b-2)BL3"
     result = Check_Unit_and_Copy(Category, 2, wb_MATOME.Worksheets(TargetUnit & "(BL3)"), TargetUnit)
-    If result = False Then Call Fin("ŠÖ”[Check_Unit_and_Copy]‚ª¸”s‚µ‚Ü‚µ‚½", 3)
-    If MsgBox("‘I‘ğ‚³‚ê‚Ä‚é•”•ª‚ğƒRƒs[‚µ‚Ü‚µ‚½B" & vbCrLf & "Ÿ‚ÍƒV[ƒgu‚Ü‚Æ‚ßv‚É’£‚è•t‚¯‚Å‚·B" & vbCrLf & "i‚İ‚Ü‚·‚©H", vbYesNo + vbQuestion, "Šm”F") = vbNo Then Call Fin("uNov‚ª‘I‘ğ‚³‚ê‚Ü‚µ‚½", 1)
-    result = Find_targetcell_and_paste(Category, 2, wb_MATOME.Worksheets("‚Ü‚Æ‚ß "))
+    If result = False Then Call Fin("é–¢æ•°[Check_Unit_and_Copy]ãŒå¤±æ•—ã—ã¾ã—ãŸ", 3)
+    If MsgBox("é¸æŠã•ã‚Œã¦ã‚‹éƒ¨åˆ†ã‚’ã‚³ãƒ”ãƒ¼ã—ã¾ã—ãŸã€‚" & vbCrLf & "æ¬¡ã¯ã‚·ãƒ¼ãƒˆã€Œã¾ã¨ã‚ã€ã«å¼µã‚Šä»˜ã‘ã§ã™ã€‚" & vbCrLf & "é€²ã¿ã¾ã™ã‹ï¼Ÿ", vbYesNo + vbQuestion, "ç¢ºèª") = vbNo Then Call Fin("ã€ŒNoã€ãŒé¸æŠã•ã‚Œã¾ã—ãŸ", 1)
+    result = Find_targetcell_and_paste(Category, 2, wb_MATOME.Worksheets("ã¾ã¨ã‚ "))
 
 
 
     Debug.Print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-    '(c)‰^“]ğŒ@  ‚Ì•”•ª‚Ìˆ—
+    '(c)é‹è»¢æ¡ä»¶ã€€  ã®éƒ¨åˆ†ã®å‡¦ç†
     Category = "(c-1)BL2"
     result = Check_Unit_and_Copy(Category, 2, wb_MATOME.Worksheets(TargetUnit & "(BL2)"), TargetUnit)
-    If result = False Then Call Fin("ŠÖ”[Check_Unit_and_Copy]‚ª¸”s‚µ‚Ü‚µ‚½", 3)
-    If MsgBox("‘I‘ğ‚³‚ê‚Ä‚é•”•ª‚ğƒRƒs[‚µ‚Ü‚µ‚½B" & vbCrLf & "Ÿ‚ÍƒV[ƒgu‚Ü‚Æ‚ßv‚É’£‚è•t‚¯‚Å‚·B" & vbCrLf & "i‚İ‚Ü‚·‚©H", vbYesNo + vbQuestion, "Šm”F") = vbNo Then Call Fin("uNov‚ª‘I‘ğ‚³‚ê‚Ü‚µ‚½", 1)
-    result = Find_targetcell_and_paste(Category, 2, wb_MATOME.Worksheets("‚Ü‚Æ‚ß "))
+    If result = False Then Call Fin("é–¢æ•°[Check_Unit_and_Copy]ãŒå¤±æ•—ã—ã¾ã—ãŸ", 3)
+    If MsgBox("é¸æŠã•ã‚Œã¦ã‚‹éƒ¨åˆ†ã‚’ã‚³ãƒ”ãƒ¼ã—ã¾ã—ãŸã€‚" & vbCrLf & "æ¬¡ã¯ã‚·ãƒ¼ãƒˆã€Œã¾ã¨ã‚ã€ã«å¼µã‚Šä»˜ã‘ã§ã™ã€‚" & vbCrLf & "é€²ã¿ã¾ã™ã‹ï¼Ÿ", vbYesNo + vbQuestion, "ç¢ºèª") = vbNo Then Call Fin("ã€ŒNoã€ãŒé¸æŠã•ã‚Œã¾ã—ãŸ", 1)
+    result = Find_targetcell_and_paste(Category, 2, wb_MATOME.Worksheets("ã¾ã¨ã‚ "))
  
-    '(c)‰^“]ğŒ@  ‚Ì•”•ª‚Ìˆ—
+    '(c)é‹è»¢æ¡ä»¶ã€€  ã®éƒ¨åˆ†ã®å‡¦ç†
     Category = "(c-2)BL3"
     result = Check_Unit_and_Copy(Category, 2, wb_MATOME.Worksheets(TargetUnit & "(BL3)"), TargetUnit)
-    If result = False Then Call Fin("ŠÖ”[Check_Unit_and_Copy]‚ª¸”s‚µ‚Ü‚µ‚½", 3)
-    If MsgBox("‘I‘ğ‚³‚ê‚Ä‚é•”•ª‚ğƒRƒs[‚µ‚Ü‚µ‚½B" & vbCrLf & "Ÿ‚ÍƒV[ƒgu‚Ü‚Æ‚ßv‚É’£‚è•t‚¯‚Å‚·B" & vbCrLf & "i‚İ‚Ü‚·‚©H", vbYesNo + vbQuestion, "Šm”F") = vbNo Then Call Fin("uNov‚ª‘I‘ğ‚³‚ê‚Ü‚µ‚½", 1)
-    result = Find_targetcell_and_paste(Category, 2, wb_MATOME.Worksheets("‚Ü‚Æ‚ß "))
+    If result = False Then Call Fin("é–¢æ•°[Check_Unit_and_Copy]ãŒå¤±æ•—ã—ã¾ã—ãŸ", 3)
+    If MsgBox("é¸æŠã•ã‚Œã¦ã‚‹éƒ¨åˆ†ã‚’ã‚³ãƒ”ãƒ¼ã—ã¾ã—ãŸã€‚" & vbCrLf & "æ¬¡ã¯ã‚·ãƒ¼ãƒˆã€Œã¾ã¨ã‚ã€ã«å¼µã‚Šä»˜ã‘ã§ã™ã€‚" & vbCrLf & "é€²ã¿ã¾ã™ã‹ï¼Ÿ", vbYesNo + vbQuestion, "ç¢ºèª") = vbNo Then Call Fin("ã€ŒNoã€ãŒé¸æŠã•ã‚Œã¾ã—ãŸ", 1)
+    result = Find_targetcell_and_paste(Category, 2, wb_MATOME.Worksheets("ã¾ã¨ã‚ "))
  
  
  
  
 
 
-    'wb_MATOME.Worksheets(TargetUnit).ResetAllPageBreaks ' ‘S‚Ä‚Ì‰üƒy[ƒW‚ğƒNƒŠƒA
-    wb_MATOME.Worksheets(TargetUnit).PageSetup.printArea = False ' ‘S‚Ä‚Ìˆóü”ÍˆÍ‚ğƒNƒŠƒA
+    'wb_MATOME.Worksheets(TargetUnit).ResetAllPageBreaks ' å…¨ã¦ã®æ”¹ãƒšãƒ¼ã‚¸ã‚’ã‚¯ãƒªã‚¢
+    wb_MATOME.Worksheets(TargetUnit).PageSetup.printArea = False ' å…¨ã¦ã®å°åˆ·ç¯„å›²ã‚’ã‚¯ãƒªã‚¢
 
     
-    Call Fin("‚±‚ê‚ÅI—¹‚Å‚·B", 1)
-    Exit Sub  ' ’Êí‚Ìˆ—‚ªŠ®—¹‚µ‚½‚çƒGƒ‰[ƒnƒ“ƒhƒ‰‚ğƒXƒLƒbƒv
+    Call Fin("ã“ã‚Œã§çµ‚äº†ã§ã™ã€‚", 1)
+    Exit Sub  ' é€šå¸¸ã®å‡¦ç†ãŒå®Œäº†ã—ãŸã‚‰ã‚¨ãƒ©ãƒ¼ãƒãƒ³ãƒ‰ãƒ©ã‚’ã‚¹ã‚­ãƒƒãƒ—
 ErrorHandler:
-    Call Fin("ƒGƒ‰[‚Å‚·B“à—e‚Í@ " & Err.Description, 3)
+    Call Fin("ã‚¨ãƒ©ãƒ¼ã§ã™ã€‚å†…å®¹ã¯ã€€ " & Err.Description, 3)
     Exit Sub
     
 End Sub
@@ -205,27 +205,27 @@ End Sub
 
 
 
-'ƒV[ƒgsheet‚ÌCategory‚ÌƒZƒ‹‚É³‚µ‚¢ƒ†ƒjƒbƒg‚ª“ü‚Á‚Ä‚é‚©Šm”F‚µ‚ÄAƒRƒs[==============================================================================================================================
+'ã‚·ãƒ¼ãƒˆsheetã®Categoryã®ã‚»ãƒ«ã«æ­£ã—ã„ãƒ¦ãƒ‹ãƒƒãƒˆãŒå…¥ã£ã¦ã‚‹ã‹ç¢ºèªã—ã¦ã€ã‚³ãƒ”ãƒ¼==============================================================================================================================
 Function Check_Unit_and_Copy(ByVal Category As String, ByVal TARGET_COL As Integer, ByVal sheet As Worksheet, ByVal TargetUnit As String) As Boolean
     
     Check_Unit_and_Copy = False
     sheet.Activate
     ActiveWindow.Zoom = 60
-    Dim r As Integer: r = 2 ' uCategory vs‚©‚çuƒ†ƒjƒbƒg–¼vs‚Ü‚Å‚Ìs”
+    Dim r As Integer: r = 2 ' ã€ŒCategory ã€è¡Œã‹ã‚‰ã€Œãƒ¦ãƒ‹ãƒƒãƒˆåã€è¡Œã¾ã§ã®è¡Œæ•°
     
-    Debug.Print "OK0:  " & sheet.Cells(getLineNum(Category, TARGET_COL, sheet) + 0, TARGET_COL)  ' uCategory v
-    Debug.Print "OK1:  " & sheet.Cells(getLineNum(Category, TARGET_COL, sheet) + 1, TARGET_COL) ' uƒ†ƒjƒbƒgv
-    Debug.Print "OK2:  " & sheet.Cells(getLineNum(Category, TARGET_COL, sheet) + 2, TARGET_COL) ' ã‚Ìs‚ªŒ‹‡‚³‚ê‚Ä‚éê‡‚Í‹óA@‚»‚¤‚Å‚È‚¢ê‡‚Íuƒ†ƒjƒbƒg–¼v‚Ì”¤
+    Debug.Print "OK0:  " & sheet.Cells(getLineNum(Category, TARGET_COL, sheet) + 0, TARGET_COL)  ' ã€ŒCategory ã€
+    Debug.Print "OK1:  " & sheet.Cells(getLineNum(Category, TARGET_COL, sheet) + 1, TARGET_COL) ' ã€Œãƒ¦ãƒ‹ãƒƒãƒˆã€
+    Debug.Print "OK2:  " & sheet.Cells(getLineNum(Category, TARGET_COL, sheet) + 2, TARGET_COL) ' ä¸Šã®è¡ŒãŒçµåˆã•ã‚Œã¦ã‚‹å ´åˆã¯ç©ºã€ã€€ãã†ã§ãªã„å ´åˆã¯ã€Œãƒ¦ãƒ‹ãƒƒãƒˆåã€ã®ç­ˆ
     Debug.Print "OK3:  " & sheet.Cells(getLineNum(Category, TARGET_COL, sheet) + 3, TARGET_COL)
     
-    If sheet.Cells(getLineNum(Category, TARGET_COL, sheet) + 1, TARGET_COL).MergeCells Then  '  B—ñ@ƒZƒ‹‚ªŒ‹‡‚³‚ê‚Ä‚¢‚éê‡
+    If sheet.Cells(getLineNum(Category, TARGET_COL, sheet) + 1, TARGET_COL).MergeCells Then  '  Båˆ—ã€€ã‚»ãƒ«ãŒçµåˆã•ã‚Œã¦ã„ã‚‹å ´åˆ
        r = r + sheet.Cells(getLineNum(Category, TARGET_COL, sheet) + 1, TARGET_COL).mergeArea.Rows.Count - 1
     End If
 
     If sheet.Cells(getLineNum(Category, TARGET_COL, sheet) + r, TARGET_COL).Value <> TargetUnit Then
-        MsgBox "ƒV[ƒgu" & sheet.Name & "v‚Ì" & Category & "‚Ìƒ†ƒjƒbƒg‚ªˆê’v‚µ‚Ü‚¹‚ñB@I—¹‚µ‚Ü‚·B" & vbCrLf & " TargetUnit@= " & TargetUnit & vbCrLf & "ƒZƒ‹F" & sheet.Cells(getLineNum(Category, TARGET_COL, sheet) + 3, TARGET_COL).Value, Buttons:=vbCritical
+        MsgBox "ã‚·ãƒ¼ãƒˆã€Œ" & sheet.Name & "ã€ã®" & Category & "ã®ãƒ¦ãƒ‹ãƒƒãƒˆãŒä¸€è‡´ã—ã¾ã›ã‚“ã€‚ã€€çµ‚äº†ã—ã¾ã™ã€‚" & vbCrLf & " TargetUnitã€€= " & TargetUnit & vbCrLf & "ã‚»ãƒ«ï¼š" & sheet.Cells(getLineNum(Category, TARGET_COL, sheet) + 3, TARGET_COL).Value, Buttons:=vbCritical
     Else
-        Debug.Print "OK:  r = " & r & "     Category = "; Category & "    TargetUnit = " & TargetUnit & "    ƒZƒ‹= " & sheet.Cells(getLineNum(Category, TARGET_COL, sheet) + r, TARGET_COL).Value
+        Debug.Print "OK:  r = " & r & "     Category = "; Category & "    TargetUnit = " & TargetUnit & "    ã‚»ãƒ«= " & sheet.Cells(getLineNum(Category, TARGET_COL, sheet) + r, TARGET_COL).Value
         sheet.Rows(getLineNum(Category, TARGET_COL, sheet) + r & ":" & getLineNum(Category, TARGET_COL, sheet) + r + sheet.Cells(getLineNum(Category, TARGET_COL, sheet) + r, TARGET_COL).mergeArea.Rows.Count - 1).Copy
         sheet.Rows(getLineNum(Category, TARGET_COL, sheet) + r & ":" & getLineNum(Category, TARGET_COL, sheet) + r + sheet.Cells(getLineNum(Category, TARGET_COL, sheet) + r, TARGET_COL).mergeArea.Rows.Count - 1).Select
         Check_Unit_and_Copy = True
@@ -249,19 +249,19 @@ Function Find_targetcell_and_paste(ByVal Category As String, ByVal TARGET_COL As
         
         'For i = getLineNum(Category, TARGET_COL, sheet) To sheet.Cells(Rows.Count, TARGET_COL).End(xlUp).Row
         For i = getLineNum(Category, TARGET_COL, sheet) To sheet.UsedRange.Rows(sheet.UsedRange.Rows.Count).Row
-            'Debug.Print "s”Ô†: " & i & "    Value: " & sheet.Cells(i, TARGET_COL).Value & "      Cells(i, TARGET_COL).MergeArea.Rows.Count = " & Cells(i, 2).MergeArea.Rows.Count
+            'Debug.Print "è¡Œç•ªå·: " & i & "    Value: " & sheet.Cells(i, TARGET_COL).Value & "      Cells(i, TARGET_COL).MergeArea.Rows.Count = " & Cells(i, 2).MergeArea.Rows.Count
             If sheet.Cells(i, TARGET_COL).Value = "" Then '
-                Debug.Print "‹ó‚È‚Ì‚ÅA‚±‚±‚É“\‚è•t‚¯‚Ü‚·IIII@s”Ô†: " & i & "    Value: " & sheet.Cells(i, TARGET_COL).Value
+                Debug.Print "ç©ºãªã®ã§ã€ã“ã“ã«è²¼ã‚Šä»˜ã‘ã¾ã™ï¼ï¼ï¼ï¼ã€€è¡Œç•ªå·: " & i & "    Value: " & sheet.Cells(i, TARGET_COL).Value
                 sheet.Cells(i, 1).Select
-                If MsgBox("‚±‚±‚É’l‚ğ“\‚è•t‚¯‚Ä‚¢‚¢‚Å‚·‚©H", vbYesNo + vbQuestion, "Šm”F") = vbYes Then
+                If MsgBox("ã“ã“ã«å€¤ã‚’è²¼ã‚Šä»˜ã‘ã¦ã„ã„ã§ã™ã‹ï¼Ÿ", vbYesNo + vbQuestion, "ç¢ºèª") = vbYes Then
                     sheet.Cells(i, 1).Insert xlDown
-                    If MsgBox("“\‚è•t‚¯‚Ü‚µ‚½‚ªOK‚Å‚·‚©HH" & vbCrLf & "Ÿ‚Éi‚Ş‚É‚ÍYes", vbYesNo + vbQuestion, "Šm”F") = vbNo Then Exit Function
+                    If MsgBox("è²¼ã‚Šä»˜ã‘ã¾ã—ãŸãŒOKã§ã™ã‹ï¼Ÿï¼Ÿ" & vbCrLf & "æ¬¡ã«é€²ã‚€ã«ã¯Yes", vbYesNo + vbQuestion, "ç¢ºèª") = vbNo Then Exit Function
                 Else
                     Exit Function
                 End If
                 Exit For
             End If
-            If Cells(i, TARGET_COL).MergeCells Then  '  B—ñ@ƒZƒ‹‚ªŒ‹‡‚³‚ê‚Ä‚¢‚éê‡Ai‚ÉŒ‹‡‚³‚ê‚Ä‚é•ª‚¾‚¯‘«‚µ‚ÄŸ‚Ìƒ‹[ƒv‚Ö
+            If Cells(i, TARGET_COL).MergeCells Then  '  Båˆ—ã€€ã‚»ãƒ«ãŒçµåˆã•ã‚Œã¦ã„ã‚‹å ´åˆã€iã«çµåˆã•ã‚Œã¦ã‚‹åˆ†ã ã‘è¶³ã—ã¦æ¬¡ã®ãƒ«ãƒ¼ãƒ—ã¸
                 i = i + Cells(i, TARGET_COL).mergeArea.Rows.Count - 1
             End If
         Next
@@ -274,7 +274,7 @@ End Function
 
 
 '==============================================================================================================================
-Sub ƒƒOƒm[ƒg‚ğHTMLo—Í‚Æ’²®ŠÔ‚ªƒƒOƒm[ƒg‚É‹LÚ‚³‚ê‚Ä‚é‚©Šm”F_ƒ†ƒjƒbƒgŒ(Nen As Integer, Tsuki As Integer)
+Sub ãƒ­ã‚°ãƒãƒ¼ãƒˆã‚’HTMLå‡ºåŠ›ã¨èª¿æ•´æ™‚é–“ãŒãƒ­ã‚°ãƒãƒ¼ãƒˆã«è¨˜è¼‰ã•ã‚Œã¦ã‚‹ã‹ç¢ºèª_ãƒ¦ãƒ‹ãƒƒãƒˆæœˆ(Nen As Integer, Tsuki As Integer)
     Dim Command As String
     Dim LogNOTE_from As String
     Dim LogNOTE_to As String
@@ -286,12 +286,12 @@ Sub ƒƒOƒm[ƒg‚ğHTMLo—Í‚Æ’²®ŠÔ‚ªƒƒOƒm[ƒg‚É‹LÚ‚³‚ê‚Ä‚é‚©Šm”F_ƒ†ƒjƒbƒgŒ(Ne
     MsgBox LogNOTE_to
     result = CopyFileSafely(TARGET_PATH & "\" & Nen & "\" & Format(Tsuki, "00") & "\" & LogNOTE_from, DIST_PATH & "\" & LogNOTE_to)
     If Not result Then
-        MsgBox "ƒRƒs[¸”sc@I—¹‚µ‚Ü‚·B", vbCritical
+        MsgBox "ã‚³ãƒ”ãƒ¼å¤±æ•—â€¦ã€€çµ‚äº†ã—ã¾ã™ã€‚", vbCritical
     Else
-        Command = "cd /c/Users/kenic/Documents/operation_log_NEW" & ";" & _
-                   "./excelgrep_by_XMLparse.sh SACLA/" & LogNOTE_to & " '$|ˆø“n' '$|ˆø‚«“n' '$|”g’·•ÏXˆË—Š' '$|ƒ†ƒjƒbƒg' '$|—˜—pI—¹' '$|‰^“]I—¹'" & ";" & _
-                   "read -p 'ˆ—‚ªŠ®—¹‚µ‚Ü‚µ‚½BEnterƒL[‚ğ‰Ÿ‚·‚ÆI—¹‚µ‚Ü‚·...'"
-        Debug.Print "ƒRƒ}ƒ“ƒh‚ÍˆÈ‰º‚Å‚·B"
+        Command = "cd /c/Users/kenic/Dropbox/gitdir/operation_log_NEW" & ";" & _
+                   "./excelgrep_by_XMLparse.sh D:/LOGNOTE/SACLA/" & LogNOTE_to & " '$|å¼•æ¸¡' '$|å¼•ãæ¸¡' '$|æ³¢é•·å¤‰æ›´ä¾é ¼' '$|ãƒ¦ãƒ‹ãƒƒãƒˆ' '$|åˆ©ç”¨çµ‚äº†' '$|é‹è»¢çµ‚äº†'" & ";" & _
+                   "read -p 'å‡¦ç†ãŒå®Œäº†ã—ã¾ã—ãŸã€‚Enterã‚­ãƒ¼ã‚’æŠ¼ã™ã¨çµ‚äº†ã—ã¾ã™...'"
+        Debug.Print "ã‚³ãƒãƒ³ãƒ‰ã¯ä»¥ä¸‹ã§ã™ã€‚"
         Debug.Print Command
         ExecuteGitBashCommand Command
     End If
